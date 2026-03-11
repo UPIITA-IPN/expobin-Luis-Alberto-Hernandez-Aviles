@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-// FunciÛn potenciacion binaria
+// Funci√≥n potenciacion binaria
 long long potenciacionbinaria(long long M, long long e, long long n) {
-    if (n == 1) return 0; // Cualquier n˙mero mod 1 es 0
+    if (n == 1) return 0; // Cualquier n√∫mero mod 1 es 0
 
-    // 1. Hallar el bit m·s significativo (k-1)
+    // 1. Hallar el bit m√°s significativo (k-1)
     int k = 0;
     long long temp = e;
     while (temp > 0) {
         temp >>= 1;
         k++;
     }
-    // 2. InicializaciÛn: If c_{k-1} = 1 Then C = M else C = 1
-    // (Como el exponente > 0, el bit c_{k-1} siempre ser· 1)
+    // 2. Inicializaci√≥n: If c_{k-1} = 1 Then C = M else C = 1
+    // (Como el exponente > 0, el bit c_{k-1} siempre ser√° 1)
     long long C = M % n;
 
     // 3. Ciclo principal: For i = k-2 down to 0
@@ -45,3 +45,4 @@ int main() {
 
     return 0;
 }
+
